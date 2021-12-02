@@ -11,6 +11,7 @@ import com.m2i.naturecollection.MainActivity
 import com.m2i.naturecollection.PlantRepository.Singleton.plantList
 import com.m2i.naturecollection.R
 import com.m2i.naturecollection.adapter.PlantAdapter
+import com.m2i.naturecollection.adapter.PlantItemDecoration
 
 class CollectionFragment(
     private val context: MainActivity
@@ -24,8 +25,9 @@ class CollectionFragment(
 
         // Recuperer le recyclerView
         val collectionRecyclerView = view.findViewById<RecyclerView>(R.id.collection_recycler_list)
-        collectionRecyclerView.adapter = PlantAdapter(context, plantList, R.layout.item_vertical_plant)
+        collectionRecyclerView.adapter = PlantAdapter(context, plantList.filter{it.liked}, R.layout.item_vertical_plant)
         collectionRecyclerView.layoutManager = LinearLayoutManager(context)
+        collectionRecyclerView.addItemDecoration(PlantItemDecoration())
 
         return view
     }
