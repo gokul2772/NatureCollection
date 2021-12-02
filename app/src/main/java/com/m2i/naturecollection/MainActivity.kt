@@ -2,6 +2,7 @@ package com.m2i.naturecollection
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.m2i.naturecollection.fragments.CollectionFragment
 import com.m2i.naturecollection.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         repo.updateData{
             //Injecter le fragment dans notre boite (fragment_container)
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, HomeFragment(this))
+            transaction.replace(R.id.fragment_container, CollectionFragment(this))
             transaction.addToBackStack(null)
             transaction.commit()
         }
