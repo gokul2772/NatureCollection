@@ -10,7 +10,7 @@
 
     <!-- Page d'ajout de plantes -->
     <string name="add_plant_page_title">Ajout d\'une plante</string>
-    <string name="add_plant_page_upload_button">Charger une Image</string>
+    <string name="add_plant_page_upload_button">Charger image</string>
     <string name="add_plant_page_name_input">@string/item_plant_name</string>
     <string name="add_plant_page_description_input">@string/item_plant_description</string>
 
